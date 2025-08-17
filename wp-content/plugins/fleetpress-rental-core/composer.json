@@ -1,0 +1,11 @@
+{
+  "name": "fleetpress/rental-core",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": { "Fpr\\Rental\\": "includes/" }
+  },
+  "require": {
+    "stripe/stripe-php": "^13.0",
+    "endroid/qr-code": "^4.8"
+  }
+}
