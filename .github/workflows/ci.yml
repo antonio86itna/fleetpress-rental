@@ -1,0 +1,11 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  php-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PHP Lint
+        run: |
+          find wp-content/plugins -name "*.php" -print0 | xargs -0 -I{} php -l {}
+          find wp-content/themes -name "*.php" -print0 | xargs -0 -I{} php -l {}
